@@ -1,0 +1,112 @@
+<ion-content class="page_signin">
+
+  <div class="blue-background">
+
+    <app-language-buttons></app-language-buttons>
+
+    <ion-label class="lbl_header">{{ 'main.registration.title' | translate }}</ion-label>
+
+    <div class="div-logo">
+      <img src="../../assets/images/logo.png" class="img_logo" />
+    </div>
+
+  </div>
+
+  <div class="div-card">
+
+    <ion-card>
+
+      <form [formGroup]="reg_form" autocomplete="off">
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="person-outline" color="primary"></ion-icon>
+          <ion-input type="text" formControlName="firstname"
+            placeholder="{{ 'main.registration.first_name' | translate }}" class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.firstname.hasError('required') && reg_form.controls.firstname.touched">
+          <p class="content add-error">{{ 'main.registration.err_first_name' | translate }}</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="person" color="primary"></ion-icon>
+          <ion-input type="text" formControlName="lastname"
+            placeholder="{{ 'main.registration.last_name' | translate }}" class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.lastname.hasError('required') && reg_form.controls.lastname.touched">
+          <p class="content add-error">{{ 'main.registration.err_last_name' | translate }}</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="mail" color="primary"></ion-icon>
+          <ion-input type="email" formControlName="email" placeholder="{{ 'main.registration.email' | translate }}"
+            class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error"
+          *ngIf="reg_form.controls.email.hasError('required') && reg_form.controls.email.touched">
+          <p class="content">{{ 'main.registration.err_email' | translate }}</p>
+        </ion-item>
+        <ion-item no-padding lines="none" class="validator-error"
+          *ngIf="reg_form.controls.email.hasError('pattern') && reg_form.controls.email.touched">
+          <p class="content">Please Enter Valid Email!</p>
+        </ion-item>
+
+        <div class="input-item add space contry-contact country_flag">
+          <ngx-intl-tel-input [cssClass]="'custom'"
+            [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]" [enableAutoCountrySelect]="false"
+            [enablePlaceholder]="true" [searchCountryFlag]="true"
+            [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]" [selectFirstCountry]="false"
+            [selectedCountryISO]="CountryISO.India" [maxLength]="15" [phoneValidation]="true"
+            [separateDialCode]="separateDialCode" name="phone" formControlName="phone" class="_flags">
+          </ngx-intl-tel-input>
+        </div>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.phone.hasError('required') && reg_form.controls.phone.touched">
+          <p class="content add-error">{{ 'main.registration.err_phone_number' | translate }}</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add">
+          <ion-icon name="lock-closed-outline" color="primary"></ion-icon>
+          <ion-input type="password" formControlName="password"
+            placeholder="{{ 'main.registration.password' | translate }}" class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.password.hasError('required') && reg_form.controls.password.touched">
+          <p class="content add-error">{{ 'main.registration.err_password' | translate }}</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add">
+          <ion-icon name="lock-closed" color="primary"></ion-icon>
+          <ion-input type="password" formControlName="confirm_password"
+            placeholder="{{ 'main.registration.c_password' | translate }}" class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.confirm_password.hasError('required') && reg_form.controls.confirm_password.touched">
+          <p class="content add-error">{{ 'main.registration.err_c_password' | translate }}</p>
+        </ion-item>
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reg_form.controls.confirm_password.touched && reg_form.hasError('MatchPassword','confirm_password')">
+          <p class="content add-error">{{ 'main.registration.err_not_match_pass' | translate }}</p>
+        </ion-item>
+
+      </form>
+
+    </ion-card>
+
+    <div class="btn-bottom">
+      <ion-button expand="full" size="large" shape="round" (click)="signup()">
+        {{ 'main.registration.signup' | translate }}</ion-button>
+
+      <ion-label class="lbl-new" (click)="signin()">{{ 'main.registration.allready_account' | translate }}</ion-label>
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "LetsMoveNew",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

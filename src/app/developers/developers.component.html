@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.developers.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <img src="../../assets/images/mainDevelopers.jpg" class="img_main" />
+
+  <ion-card class="card_search">
+    <div class="div_img">
+      <img src="../../assets/images/headerLogo.png" class="img_logo"/>
+    </div>
+    <form [formGroup]="searchLocationForm">
+
+      <ngx-autocomplete #keyword (keypress)="onSearchChange($event.target.value)" [searchKeyword]="'address'"
+        [placeholderValue]="'main.home.search_placeholder' | translate" [entries]="locationArry"
+        (selectedValue)="selectEvent($event)" class="search">
+      </ngx-autocomplete>
+      <span class="search_error">{{searchErrorMsg ? searchErrorMsg : '' }}</span>
+    </form>
+    <ion-row class="row_search">
+      <ion-col size="4" style="padding-left: 0px;">
+      <ion-button expand="full"  (click)="getSearchData('2',keyword)" class="btn_buy">{{ 'main.home.buy' | translate }}</ion-button>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button expand="full"  (click)="getSearchData('1',keyword)" class="btn_buy">{{ 'main.home.for_rent' | translate }}</ion-button>
+      </ion-col>
+      <ion-col size="4">
+      <ion-button expand="full" [routerLink]="['/signin']" class="btn_buy">{{ 'main.home.for_sale' | translate }}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <div class="div_divider"></div>
+
+  <div class="div_content">
+    <div class="isEmpty" *ngIf="content == '' || img == ''">
+      <ion-label class="lbl-empty">{{'main.reusable.empty' | translate}}</ion-label>
+    </div>
+    <h2 [innerHTML]="content ? content : '' " class="lbl_desc_html"></h2>
+  </div>
+  <img *ngIf="img" [src]="api.getimageUrl('cms_pages/',img)" class="img_meet" />
+
+
+</ion-content>

@@ -1,0 +1,293 @@
+ion-content {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+.lbl_main {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--ion-color-dark);
+}
+
+.input-item {
+  //--background: transparent;
+  --inner-padding-end: 0px;
+  --padding-start: 0px;
+  padding: 10px 0px 0px 0px;
+  box-shadow: 0px 0px 0px #ccc;
+  margin: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  margin-top: 0px;
+  background: var(--ion-color-primary-contrast);
+  --background: var(--ion-color-primary-contrast);
+
+  ion-icon {
+    color: var(--ion-color-medium);
+    font-size: 24px;
+  }
+
+  .lbl-dropdown {
+    font-size: 16px;
+    color: var(--ion-color-dark);
+    font-weight: 500;
+  }
+
+  .input-box {
+    border: 1px solid #ccc;
+    margin-left: 8px;
+    //--placeholder-color: #fff;
+    //--color: #fff;
+  }
+
+  .btn-select {
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #eee;
+    height: 44px;
+  }
+}
+
+.add {
+  padding-top: 4px !important;
+}
+
+.add_top {
+  margin-top: 14px;
+}
+
+.col_right {
+  padding: 0px 4px 0px 0px;
+}
+
+.col_left {
+  padding: 0px 0px 0px 4px;
+}
+.spc_right {
+  padding: 0px 8px 0px 0px;
+}
+.spc_left {
+  padding: 0px 0px 0px 8px;
+}
+.btn_find {
+  margin-top: 70px;
+  --border-radius: 8px;
+}
+
+.item_width {
+  width: 285px;
+  padding-top: 12px !important;
+  padding-right: 8px !important;
+  position: absolute;
+  right: 0;
+}
+
+// Field Error
+.validator-error {
+  --background: transparent;
+  color: #d44848;
+  --min-height: 18px;
+  --padding-start: 0px;
+
+  .content {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 12px;
+  }
+}
+
+.row_res {
+  margin-top: 16px;
+
+  .lbl_res_spc {
+    padding-left: 0px;
+  }
+
+  .lbl_resDigit {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .lbl_res {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .btn_filter {
+    margin: 0px;
+  }
+
+  .card_list {
+    margin: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0px;
+    background: var(--ion-color-secondary);
+    height: 100px;
+
+    .img_list {
+      object-fit: cover;
+      height: 70px;
+      width: 100%;
+    }
+    .lbl_list {
+      font-weight: bold;
+      font-size: 16px;
+      color: var(--ion-color-dark);
+      padding: 5px;
+    }
+  }
+
+  .lbl_price {
+    display: block;
+
+    .lbl_currency {
+      font-size: 16px;
+    }
+    .lbl_money {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .lbl_days {
+    font-size: 14px;
+    display: block;
+    padding: 2px 0px;
+  }
+
+  .btn_select {
+    width: 50%;
+    margin-left: 0px;
+  }
+}
+.lbl_header {
+  font-weight: bold;
+  font-size: 22px;
+  padding: 5px 0px;
+}
+.txt {
+  font-size: 10px;
+}
+.spc {
+  padding: 5px 0px !important;
+}
+.lbl_desc {
+  font-size: 14px;
+}
+.img_public {
+  width: 100px;
+}
+.lbl_no {
+  font-size: 16px;
+  display: block;
+}
+.lbl_no_info {
+  font-size: 14px;
+  display: block;
+}
+.icon_mail {
+  text-align: center;
+  line-height: 4;
+
+  ion-icon {
+    font-size: 24px;
+  }
+}
+.clr {
+  background: var(--ion-color-secondary);
+}
+
+.div_main {
+  box-shadow: 1px 1px 0px 0px #ccc;
+}
+
+.slides_imgs {
+  padding-bottom: 28px;
+
+  .img_list {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+  }
+}
+.lbl_price_add {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 0px;
+  display: block;
+}
+.lbl_star {
+  font-size: 14px;
+  display: block;
+  padding: 5px 0px;
+}
+.lbl_add {
+  font-size: 14px;
+  display: block;
+}
+.lbl_desc_list {
+  display: block;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 0px;
+}
+.icon_mail {
+  vertical-align: middle;
+}
+.hr_line {
+  border: 1px solid #eee;
+  margin: 8px 0px;
+}
+.lbl_status {
+  display: block;
+  font-size: 14px;
+  padding: 0px 0px 5px 0px;
+  .lbl_status_head {
+    font-weight: bold;
+  }
+  .lbl_status_desc {
+    font-weight: normal;
+  }
+}
+.add_spc {
+  margin-right: 8px;
+}
+.lbl_price_list {
+  padding: 0px;
+  font-size: 24px;
+}
+.btn_spc {
+  padding: 0px;
+}
+
+@import "../mixins";
+
+.menu-wrapper {
+  @include elevation();
+  background: white;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.menu-item {
+  display: block;
+  background: white;
+  padding: 16px;
+  border: none;
+  width: 100%;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.06);
+  }
+}

@@ -1,0 +1,371 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.property_detail.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img *ngIf="advertisementImage" [src]="advertisementImage" (click)="ads()">
+
+  <ion-label class="lbl_price_add">
+    {{propertyDetails.slug_title != 'null' ? propertyDetails.slug_title : ''}}
+  </ion-label>
+
+  <ion-label class="lbl_add">
+    {{propertyDetails.location}}
+  </ion-label>
+
+  <ion-label color="primary" class="lbl_price_list">
+    €{{propertyDetails.price}}
+  </ion-label>
+
+  <ion-slides pager="true" [options]="slideOptsDetails" class="slides_details">
+    <ng-container *ngIf="propertyDetails.image else elseblock">
+      <ion-slide *ngFor="let slide of slides;">
+        <img [src]="slide.url" class="img_detail_slide" />
+      </ion-slide>
+    </ng-container>
+    <ng-template #elseblock>
+      <img src="{{defaultImg}}">
+    </ng-template>
+  </ion-slides>
+
+  <ion-segment mode="md" [(ngModel)]="tabs" value="view">
+    <ion-segment-button class="btn_seg" value="desc" [ngClass]="{'activeTabsbtn': this.tabName == 'Description'}"
+      (click)="openTab('Description')">
+      <ion-label>{{ 'main.property_detail.description' | translate }}</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="btn_seg" value="view" [ngClass]="{'activeTabsbtn': this.tabName == 'MapAndStreet'}"
+      (click)="openTab('MapAndStreet')">
+      <ion-label>{{ 'main.property_detail.map_street_view' | translate }}</ion-label>
+
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="tabs">
+    <div *ngSwitchCase="'desc'" class="div_box">
+      <span *ngIf="this.tabName == 'Description'" [ngClass]="{'activeTab': this.tabName == 'Description'}">
+        <ion-row class="row_seg">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <p *ngIf="propertyDetails.p_unique_id">
+                <span class="lbl_head">{{ 'main.property_detail.reference_number' | translate }}</span>
+                <span class="lbl_desc"> {{propertyDetails.p_unique_id ? '#' + propertyDetails.p_unique_id : ''}}</span>
+              </p>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{ 'main.property_detail.price' | translate }} :</span>
+              <span class="lbl_desc"> €{{propertyDetails.price ? propertyDetails.price : ''}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.avaliable_date' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.date | date: 'dd-MMMM-yyyy'}}</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.avaliable_for' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.is_available == 1 ? 'Rent' : 'Sale'}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.type' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.categoryName | titlecase}}</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.area_size' | translate}} </span>
+              <span class="lbl_desc">{{propertyDetails.property_area_size ? propertyDetails.property_area_size : ''}} Sq
+                m</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg hr_line">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{ 'main.property_detail.floor' | translate }}</span>
+              <span class="lbl_desc">{{propertyDetails.floorName ? propertyDetails.floorName : ''}}</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.orientation' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.orientationName ? propertyDetails.orientationName : ''}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg hr_line">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.zone' | translate}} </span>
+              <span class="lbl_desc">{{propertyDetails.zoneName ? propertyDetails.zoneName : ''}}</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.heating' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.heatingName ? propertyDetails.heatingName : ''}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg hr_line">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.heating_medium' | translate}}</span>
+              <span class="lbl_desc">
+                {{propertyDetails.heatingMediumName ? propertyDetails.heatingMediumName : ''}}</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{'main.property_detail.energy_class' | translate}}</span>
+              <span class="lbl_desc"> {{propertyDetails.energyClassName ? propertyDetails.energyClassName : ''}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-label class="lbl_desc_f"
+          *ngIf="propertyDetails.propertyFeatures && propertyDetails.propertyFeatures.length">
+          {{'main.property_detail.property_features' | translate}}</ion-label>
+
+
+        <ion-row class="row_seg hr_line" *ngFor="let feature of propertyDetails.propertyFeatures;let last = last;">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{feature.name}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg hr_line">
+          <ion-col size="5" class="col_seg">
+            <ion-label class="lbl_seg" *ngIf="propertyDetails.roomName">
+              <span class="lbl_head">{{propertyDetails.roomName ? propertyDetails.roomName : ''}}+</span>
+              <span class="lbl_desc"> {{ 'main.property_detail.room' | translate }}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row_seg hr_line" *ngIf="propertyDetails.no_of_bathroom">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{propertyDetails.no_of_bathroom ? propertyDetails.no_of_bathroom : ''}} </span>
+              <span class="lbl_desc"> {{'main.property_detail.bathroom' | translate}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-label class="lbl_desc_f" *ngIf="propertyDetails.otherFeatures && propertyDetails.otherFeatures.length">
+          {{'main.property_detail.other_features' | translate}}</ion-label>
+
+        <ion-row class="row_seg hr_line" *ngFor="let feature of propertyDetails.otherFeatures;let last = last;">
+          <ion-col size="7" class="col_seg">
+            <ion-label class="lbl_seg">
+              <span class="lbl_head">{{feature.name}}</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-label class="lbl_desc_f">
+          {{ 'main.property_detail.full_description' | translate }}
+        </ion-label>
+
+        <ion-label color="medium" class="lbl_desc_d">
+          {{propertyDetails.description ? propertyDetails.description : '' }}
+        </ion-label>
+      </span>
+    </div>
+    <div class="div_box  map_box" [hidden]="this.tabName == 'Description'">
+      <ion-content>
+        <div #mapElement class="map"></div>
+      </ion-content>
+    </div>
+
+  </div>
+
+  <ion-card class="card_form">
+    <ion-label color="dark" class="lbl_prop">
+      <span class="spn_bold">{{ 'main.property_detail.i_m_interested' | translate }} </span>
+      <span class="spn"> {{ 'main.property_detail.in_this_property' | translate }}</span>
+    </ion-label>
+
+    <ion-row>
+      <ion-col size="8" style="margin: auto;">
+        <p translate="main.property_detail.contact_information" class="nago-contact-info" class="p_"></p>
+        <p class="p_">
+          <span>{{ role_name }} :</span> {{ first_name }}
+          {{ last_name }}
+        </p>
+        <p class="p_">
+          <span>{{ "main.contactus.phone_txt" | translate }}</span>
+          {{ contact_no }}
+        </p>
+      </ion-col>
+      <ion-col size="4" style="margin: auto; text-align: right;">
+        <div *ngIf="profile_image != null">
+          <img *ngIf="social_profile_image == null" [src]="this.api.getimageUrl('profile/', profile_image)"
+            class="img_profile imgs_" />
+        </div>
+        <div *ngIf="social_profile_image != null">
+          <img *ngIf="profile_image == null" src="{{ social_profile_image }}" class="img_profile imgs_" />
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <form [formGroup]="detail_form" autocomplete="off">
+
+      <ion-item lines="none" class="input-item top">
+        <ion-input type="text" formControlName="firstName"
+          placeholder="{{ 'main.property_detail.first_name' | translate }}" class="input-box">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.firstName.hasError('required') && detail_form.controls.firstName.touched">
+        <p class="content add-error">{{ 'main.property_detail.err_first_name' | translate }}</p>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item top">
+        <ion-input type="text" formControlName="lastName"
+          placeholder="{{ 'main.property_detail.last_name' | translate }}" class="input-box">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.lastName.hasError('required') && detail_form.controls.lastName.touched">
+        <p class="content add-error">{{ 'main.property_detail.err_last_name' | translate }}</p>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item top">
+        <ion-input type="number" formControlName="number" placeholder="{{ 'main.property_detail.phone' | translate }}"
+          class="input-box">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.number.hasError('required') && detail_form.controls.number.touched">
+        <p class="content add-error">{{ 'main.property_detail.err_phone' | translate }}</p>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item top">
+        <ion-input type="email" formControlName="email" placeholder="{{ 'main.property_detail.email' | translate }}"
+          class="input-box">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.email.hasError('required') && detail_form.controls.email.touched">
+        <p class="content add-error">{{ 'main.property_detail.err_email' | translate }}</p>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item top">
+        <ion-input type="number" formControlName="price"
+          placeholder="{{ 'main.property_detail.nagotiation_price' | translate }}" class="input-box">
+        </ion-input>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.price.hasError('required') && detail_form.controls.price.touched">
+        <p class="content add-error">{{ 'main.property_detail.err_price' | translate }}</p>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item add space">
+        <ion-textarea row="3" type="text" formControlName="message"
+          placeholder="{{ 'main.property_detail.enter_text_here' | translate }}" class="input-box"></ion-textarea>
+      </ion-item>
+
+      <ion-item no-padding lines="none" class="validator-error error-spc"
+        *ngIf="detail_form.controls.message.hasError('required') && detail_form.controls.message.touched">
+        <p class="content add-error">{{'main.property_detail.err_text' | translate }}</p>
+      </ion-item>
+
+      <ion-label color="dark" class="lbl_info">
+        {{ 'main.property_detail.message' | translate }}
+      </ion-label>
+
+      <ion-button expand="block" class="btn_send" (click)="send()">{{ 'main.property_detail.send_message' | translate }}
+      </ion-button>
+
+      <ion-row class="row_terms">
+        <ion-col size="1" class="col_terms">
+          <ion-checkbox mode="md" (ionChange)="checkbox($event)"></ion-checkbox>
+        </ion-col>
+        <ion-col size="11" class="col_terms">
+          <ion-label class="lbl_terms">{{ 'main.property_detail.policy' | translate }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+    </form>
+  </ion-card>
+
+  <ion-card class="card_mark">
+    <ion-label color="dark" class="lbl_head">
+      {{ 'main.property_detail.this_property_is_marketed_by' | translate }}
+    </ion-label>
+    <ion-label color="dark" class="lbl_add_full">
+      {{propertyDetails.areaName ? propertyDetails.areaName : '' }}
+      {{propertyDetails.subAreaName ? propertyDetails.subAreaName : '' }},
+    </ion-label>
+    <ion-label color="dark" class="lbl_name">
+      {{propertyDetails.neighborhoodName ? propertyDetails.neighborhoodName : '' }}</ion-label>
+    <ion-label color="dark" class="lbl_country">
+      {{propertyDetails.countryName ? propertyDetails.countryName : '' }}
+    </ion-label>
+    <div class="hr_line"></div>
+    <ion-item lines="none" class="item_property" *ngIf="this.api.isUserlogin()">
+      <ion-icon name="heart" *ngIf="like == 1" style="display: inline; color: #c41a3b;"></ion-icon>
+      <a (click)="saveProperty(this.property_content_id)">
+        <ion-icon name="heart-outline" *ngIf="like == 0"></ion-icon>
+        <span class="dark" href="#" style="color: #000;">{{ 'main.property_detail.save_property' | translate }}</span>
+      </a>
+    </ion-item>
+    <div class="hr_line"></div>
+  </ion-card>
+
+  <div *ngIf="bannerImage" class="div_banner">
+    <img [src]="bannerImage" class="img_banner">
+  </div>
+
+  <div *ngIf="listSlider?.length > 0">
+    <ion-label class="lbl_stick">{{ 'main.property_detail.recommendation_properties' | translate }}</ion-label>
+
+    <ion-slides pager="true" [options]="slideOptsFeatured" class="slides_property">
+      <ng-container *ngIf="listSlider && listSlider.length > 0">
+        <ion-slide class="slide_property" *ngFor="let slide of listSlider;">
+          <ion-card class="card_property" (click)="recommendDetails(slide.p_id)">
+            <img [src]="this.api.getimageUrl('propertyImage/',slide.image.split(',')[0])" class="img_property" />
+            <ion-label color="dark" class="lbl_head_property">{{ slide.propertyName }}</ion-label>
+            <ion-label color="medium" class="lbl_add2_property">{{ slide.description }}</ion-label>
+            <ion-label color="medium" class="lbl_rate">Neighborhood Rating</ion-label>
+          </ion-card>
+        </ion-slide>
+      </ng-container>
+      <ng-template *ngIf="listSlider && listSlider.length < 0">
+        <img src="{{defaultImg}}">
+      </ng-template>
+    </ion-slides>
+  </div>
+
+
+</ion-content>

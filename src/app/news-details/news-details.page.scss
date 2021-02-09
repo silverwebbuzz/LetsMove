@@ -1,0 +1,19 @@
+ion-content{
+    .lbl_head{
+        display: block;
+        font-weight: bold;
+        font-size: 20px;
+        // text-align: center;
+        padding: 16px 16px 0px 16px;
+    }
+    .img_main{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .lbl_desc{
+        display: block;
+        font-size: 16px;
+        padding: 16px;
+    }
+}

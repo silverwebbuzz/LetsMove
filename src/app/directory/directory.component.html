@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.directory.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <img src="../../assets/images/banner.jpg" class="img_main" />
+
+  <ion-card class="card_search">
+    <ion-label class="lbl_line">{{ 'main.home.search_title' | translate }}</ion-label>
+    <form [formGroup]="searchLocationForm">
+
+      <ngx-autocomplete #keyword (keypress)="onSearchChange($event.target.value)" [searchKeyword]="'address'"
+        [placeholderValue]="'main.home.search_placeholder' | translate" [entries]="locationArry"
+        (selectedValue)="selectEvent($event)" class="search">
+      </ngx-autocomplete>
+    </form>
+    <ion-row class="row_search">
+      <ion-button color="dark" expand="full" (click)="getSearchData('2',keyword)">{{ 'main.home.for_sale' | translate }}
+      </ion-button>
+      <ion-button color="dark" expand="full" (click)="getSearchData('1',keyword)">{{ 'main.home.for_rent' | translate }}
+      </ion-button>
+      <ion-button color="dark" expand="full" [routerLink]="['/signin']" class="btn_buy">{{ 'main.home.buy' | translate }}</ion-button>
+    </ion-row>
+  </ion-card>
+
+
+  <div class="div_content">
+    <h2 [innerHTML]="content ? content : '' " class="lbl_desc_html"></h2>
+  </div>
+  <img [src]="api.getimageUrl('cms_pages/',img)" class="img_meet" />
+
+
+</ion-content>

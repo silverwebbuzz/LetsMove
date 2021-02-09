@@ -1,0 +1,40 @@
+ion-content {
+    --background: url(../../assets/images/bannerSplash.png) 0 0/100% 100% no-repeat;
+  .lbl_head {
+    display: block;
+    padding: 18px;
+    font-size: 36px;
+    width: 65%;
+    font-weight: bold;
+  }
+  .lbl_desc {
+    display: block;
+    font-size: 20px;
+    padding: 0px 18px;
+  }
+  .div_img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    .img_logo {
+      width: 64%;
+    }
+  }
+  .row_btn {
+    position: absolute;
+    width: 100%;
+    bottom: 48px;
+    .col_btn {
+      padding: 0px;
+      ion-button {
+        text-transform: uppercase;
+        width: 80%;
+        margin: 0 auto;
+        border-left: 1px solid var(--ion-color-primary);
+        border-right: 1px solid var(--ion-color-primary);
+      }
+    }
+  }
+}

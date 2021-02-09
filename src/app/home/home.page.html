@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.home.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="../../assets/images/bannerSplash.png" class="img_main" />
+
+  <ion-card class="card_search">
+    <div class="div_img">
+      <img src="../../assets/images/headerLogo.png" class="img_logo" />
+    </div>
+    <form [formGroup]="searchLocationForm">
+      <ngx-autocomplete #keyword (keypress)="onSearchChange($event.target.value)" [searchKeyword]="'address'"
+        [placeholderValue]="'main.home.search_placeholder' | translate" [entries]="locationArry"
+        (selectedValue)="selectEvent($event)" class="search">
+      </ngx-autocomplete>
+      <span class="search_error">{{searchErrorMsg ? searchErrorMsg : '' }}</span>
+    </form>
+    <ion-row class="row_search">
+      <ion-col size="4" style="padding-left: 0px;">
+        <ion-button expand="full" (click)="getSearchData('2',keyword)" class="btn_buy">{{ 'main.home.buy' | translate }}
+        </ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="full" (click)="getSearchData('1',keyword)" class="btn_buy">
+          {{ 'main.home.for_rent' | translate }}</ion-button>
+      </ion-col>
+      <ion-col size="4">
+        <ion-button expand="full" [routerLink]="['/signin']" class="btn_buy">{{ 'main.home.for_sale' | translate }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <div class="div_divider"></div>
+
+  <ion-row class="row_explore">
+    <ion-col size="4" class="col_explore">
+      <img src="../../assets/images/homeIcon.png" class="img_explore" />
+    </ion-col>
+    <ion-col size="8" class="col_explore" style="text-align: left;">
+      <ion-label class="lbl_explore">Explore your property!</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <div class="div_divider"></div>
+
+  <div class="isEmpty1" *ngIf="listSlider?.length == 0">
+    <ion-label class="lbl-empty">{{'main.reusable.empty' | translate}}</ion-label>
+  </div>
+
+  <ion-row style="margin-top: 16px;" *ngIf="listSlider?.length > 0">
+    <ion-col size="9" style="padding: 0px;">
+      <ion-label class="lbl_stick">Featured Properties</ion-label>
+    </ion-col>
+    <ion-col size="3" style="padding: 0px; text-align: right;">
+      <ion-label color="primary" style="text-transform: uppercase; padding: 0px 16px;" (click)="listing_redirect()">Show
+      </ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-slides [options]="slideOptsNews" class="slides_news">
+    <ion-slide class="slide_news" *ngFor="let slide of listSlider;">
+      <ion-card class="card_news" (click)="PropertyDetails(slide.property_content.p_id)">
+        <img *ngIf="slide.property_content.image == ''" src="{{defaultImg}}" class="img_news" />
+
+        <img [src]="img('propertyImage/',slide.property_content.image.split(',')[0])" class="img_news" />
+        <ion-label color="dark" class="lbl_head_news">€{{ slide.property_content.price }}</ion-label>
+        <ion-label class="lbl_square">{{slide.property_content.categoryName}} </ion-label>
+        <ion-label color="medium" class="lbl_desc_news">{{ slide.property_content.description }}</ion-label>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

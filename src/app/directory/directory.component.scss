@@ -1,0 +1,48 @@
+ion-content{
+    position: relative;
+  }
+  .img_main{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card_search{
+    position: absolute;
+    top: 105px;
+    right: 0;
+    left: 0;
+    margin: 16px;
+    border-radius: 0px;
+    box-shadow: 0px 0px;
+    background: var(--ion-color-primary);
+    padding: 16px;
+    height: 175px;
+  
+      .lbl_line{
+        color: var(--ion-color-primary-contrast);
+        font-size: 22px;
+        display: block;
+        text-align: center;
+      }
+      .imp{
+        --padding-start: 0px !important;
+        padding: 0px !important;
+      }
+      .search{
+        padding: 0px 0px;
+        width: 100%;
+      }
+      .row_search{
+        float: right;
+  
+        .btn_buy{
+          width: 51px;
+        }
+      }
+  }
+  .card_search.ios.hydrated{
+    visibility: visible;
+    overflow: visible;
+    z-index: 999;
+  }

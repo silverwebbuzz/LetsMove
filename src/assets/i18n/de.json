@@ -1,0 +1,215 @@
+{
+    "main": {
+       
+        "login": {
+            "title": "Anmelden",
+            "sign_in_account": "EINLOGGEN",
+            "sign_up_account": "Sie haben noch keinen Account? ANMELDEN",
+            "forgot_password": "Passwort vergessen ?",
+            "err_email": "Bitte E-Mail eingeben!",
+            "err_password": "Bitte Passwort eingeben!",
+            "email": "Email",
+            "password": "Passwort"
+        },
+        "registration": {
+            "title": "Anmelden",
+            "first_name": "Vorname",
+            "err_first_name": "Bitte Vorname eingeben!",
+            "last_name": "Nachname",
+            "err_last_name": "Bitte Nachname eingeben!",
+            "email": "Email",
+            "err_email": "Bitte E-Mail eingeben!",
+            "err_phone_number": "Bitte geben Sie die Kontaktnummer ein!",
+            "password": "Passwort",
+            "err_password": "Bitte Passwort eingeben!",
+            "c_password": "Bestätige das Passwort",
+            "err_c_password": "Bitte Passwort eingeben!",
+            "err_not_match_pass": "Passwort bestätigen stimmt nicht mit Passwort überein.",  
+            "role": "Rolle",
+            "err_role": "Bitte Rollentyp auswählen!",
+            "GEMH": "GEMH Nummer",
+            "err_GEMH": "Bitte geben Sie die GEMH-Nummer ein.",
+
+            "reason": "Grund",
+            "err_reason": "Bitte geben Sie den Grund ein.",
+
+            "signup": "ANMELDEN",
+            "allready_account": "Sie haben bereits ein Konto ? EINLOGGEN"
+            
+            
+        },
+        "forgot": {
+            "title": "Passwort vergessen ?",
+            "email": "Email",
+            "err_email": "Bitte E-Mail eingeben!",
+            "send_mail": "E-MAIL SENDEN",
+            "back": "Zurück"
+        },
+        "home": {
+            "title": "Zuhause",
+            "search_title": "Lassen Sie uns in Bewegung kommen",
+            "search_placeholder": "LetsMove für Sie glücklich",
+            "for_sale": "Verkaufen",
+            "for_rent": "Mieten",
+            "buy" : "Kaufen",
+            "technology_advantage": "KUNDENORIENTIERT",
+            "technology_advantage_text": "Mit modernsten Website-Funktionen, einschließlich eines mehrsprachigen personalisierten Systems, das eine sichere und zuverlässige Plattform für Käufer, Verkäufer und diejenigen, die mieten möchten.",
+            "letsmove_guarantee": "BENUTZERFREUNDLICH",
+            "letsmove_guarantee_text": "Möchten Sie eine Immobilie in Griechenland kaufen, mieten oder verkaufen? Unsere benutzerfreundliche Website führt Sie durch einen nahtlosen Proccess. Führen Sie einfach Ihr Haus auf, um es zu mieten oder zu verkaufen oder nach etwas zu suchen, das Sie auf unserer vollständig transparenten Website kaufen können.",
+            "completed_transactions": "Innovative",
+            "completed_transactions_text": "Stöbern Sie durch unsere riesige Datenbank von Immobilien und finden Sie Ihr Traumhaus! Unsere Website bietet jeden Monat Tausende neuer Immobilien!",
+            
+            "where_can_i_live" : "Wo kann ich leben?",
+            "where_can_i_live_title" : "Suchen und speichern Sie Immobilien zum Verkauf und mieten in Griechenland. Geben Sie Ihre persönlichen Vorlieben nach Ihrem Budget ein und wir finden Ihre perfekte Übereinstimmung.",
+            "where_can_i_live_text" : "",
+            "where_can_i_live_link_title" : "Entdecken Sie Ihre perfekte Lage",     
+            
+            "featured_properties" : "Eigenschaften, die Ihnen gefallen könnten",
+            "meet_our_investors" : "Kundenfeedback",
+            "in_the_news" : "Aktuelle Sanien",
+            "in_the_news_text" : "Werfen Sie einen Blick durch unsere ausführlichen Artikel, die Ihnen einen einzigartigen Einblick in den griechischen Lebensstil geben! Hier finden Sie Informationen über beliebte Gebiete, Kulturerbestätten sowie Schulen und Gesundheitseinrichtungen.",
+            "read_news" : "WEITERE ARTIKEL",
+
+            "how_to_get_started" : "Wie kann ich loslegen?",
+            "q1" : "Erstellen Sie Ihr Profil",
+            "text1" : "Registrieren Sie sich jetzt, um die ersten zu sein, die eine Benachrichtigung über neue Eigenschaften erhalten, die Ihnen gefallen könnten.",
+            "create_your_profile": "Beginnen"
+        },
+        "property_list": {
+            "title": "Auflistung",
+            "sub_title": "Immobilienverkauf für London",
+            "search_radius": "Suchradius",
+            "err_select":"Bitte auswählen!",
+            "this_area_only": "Nur dieser Bereich",
+            "category": "Kategorie",
+            "select_property_category": "Wählen Sie Eigenschaftskategorie",
+            "property_type": "Art der Immobilie",
+            "select_property_type": "Wählen Sie den Eigenschaftstyp",
+            "price_range": "Preisspanne (€)",
+            "min": "Mindest",
+            "max": "Max",
+            "anytime": "Jederzeit",
+            "added_to_site": "Zur Seite hinzugefügt",
+            "find_properties": "Eigenschaften finden",
+            "properties": "Eigenschaften",
+            "price_low_to_high": "Preis niedrig bis hoch)",
+            "price_high_to_low": "Preis niedrig bis hoch)",
+            "no_more_available": "Nicht mehr verfügbar",
+            "local_call_rate": "Ortsgesprächsrate",
+            "avaliable_for": "Verfügbar für :",
+            "type": "Art :",
+            "rooms": "Räume :",
+            "more_details": "Mehr Details"
+        },
+        "contactus": {
+            "title": "Kontaktiere uns",
+            "get_in_touch_with_us": "Kontaktieren Sie uns",
+            "description": "Donec ullamcorper nulla trifft den Autor der Knöchel lla nicht. Andernfalls muss Ihr Chat-Porttor.Sed-Absolventen-Ultraschall viel lachen.",
+            "address": "Adresse:",
+            "address_text": "1481 Creekside Lane Avila Beach, CA 93424",
+            "phone_txt": "Telefon:",
+            "phone": "+53 345 7953 32453",
+            "email_txt": "Email:",
+            "email": "yourmail@gmail.com",
+            "name": "Name",
+            "err_name":"Bitte geben Sie den Namen ein!",
+            "Email": "Email",
+            "err_email":"Bitte E-Mail eingeben!",
+            "subject": "Gegenstand",
+            "err_subject": "Bitte Betreff eingeben!",
+            "message": "Botschaft",
+            "err_msg": "Bitte Nachricht eingeben!",
+            "send": "SENDEN",
+
+            "say_hello": "Sag Hallo"
+        },
+        "aboutus": {
+            "title": "Über uns",
+            "why_chose_us": "Warum uns wählen",
+            "q1": "Lorem ipsum Schmerz",
+            "txt1": "Lorem ipsum Consumer sitzen Film, der Hauptentwickler von Bachelor-Studiengängen, aber sie tun lange und Vitalität, so dass die Arbeit aufgewendet wird.",
+            "our_team": "Unser Team",
+            "name": "Tillie Burns",
+            "designation": "Marketing Manager"
+        },
+        "property_detail": {
+            "title": "Einzelheiten",
+            "description": "Beschreibung",
+            "map_street_view" : "Karte & Straßenansicht",
+            "reference_number" : "Referenznummer:",
+            "price" : "Preis",
+            "avaliable_for" : "Verfügbar für:", 
+            "type" : "Art:",
+            "area_size" : "Flächengröße:",
+            "floor" : "Fußboden:",
+            "room": "Räume:",
+            "full_description" : "Gesamte Beschreibung",
+            "i_m_interested" : "Ich bin interessiert",
+             "in_this_property" : "in dieser Eigenschaft",
+            "first_name": "Vorname",
+            "err_first_name": "Bitte Vorname eingeben!",
+            "last_name": "Nachname",
+            "err_last_name": "Bitte Nachname eingeben!",
+            "phone": "Telefonnummer",
+            "err_phone": "Bitte geben Sie die Telefonnummer ein!",
+            "email": "Email",
+            "err_email": "Bitte E-Mail kaufen!", 
+            "nagotiation_price": "Verhandlungspreis",
+            "err_price": "Bitte geben Sie den Verhandlungspreis ein!",
+            "enter_text_here": "Hier Text eingeben.",
+            "err_text": "Bitte Nachricht eingeben!",
+            "message": "Nachricht (bis zu 60 Zeichen)",
+            "send_message": "Nachricht senden",
+            "policy" : "Durch das Absenden dieses Formulars bestätigen Sie, dass Sie unseren Nutzungsbedingungen und Datenschutzbestimmungen von HomeGreekHome.com zustimmen",
+            "this_property_is_marketed_by" : "Diese Immobilie wird vermarktet von:",
+            "save_property" : "Eigenschaft speichern",
+            "recommendation_properties" : "Empfehlungseigenschaften",
+
+            
+            "request_details": "Anfragedetails",
+            "avaliable_date": "Verfügbares Datum:",
+            "construction_year:": "Baujahr:",
+            "orientation": "Orientierung",
+            "zone": "Zone",
+            "heating": "Heizung:",
+            "heating_medium": "Heizmedium:",
+            "energy_class": "Energieklasse:",
+            "property_features": "Eigenschaften",
+            "rooms": "Räume",
+            "bathroom": "Bad",
+            "other_features": "Andere Eigenschaften",   
+            "i_want_to_talk_with": "Ich möchte mit reden ",
+            "administrator": "Administratorin",
+            "agent": "Agentin",
+            "admin": "Administratorin",      
+            "best_home": "Bestes Zuhause ",
+            "real_estate": "GRUNDEIGENTUM",
+            "listing_from_real_estate_agency": "Auflistung von Immobilienagentur",
+            "website_phone_number": "Website Telefonnummer"
+        },
+        "reset": {
+            "title": "Passwort zurücksetzen",
+            "password": "Neues Kennwort",
+            "err_pass": "Bitte neues Passwort eingeben!",
+            "c_pass": "Bestätige das Passwort",
+            "err_c_pass": "Bitte geben Sie Passwort bestätigen!",
+            "not_match": "Passwort bestätigen stimmt nicht mit Passwort überein.",
+            "submit": "EINREICHEN",
+            "signin": "Anmelden"
+        },
+        "agent": {
+            "title": "Agentin"
+        },
+        "developers": {
+            "title": "Entwicklerinnen"
+        },
+        "directory": {
+            "title": "Verzeichnis"
+        },
+        "individuals": {
+            "title": "Einzelpersonen"
+        }
+        
+        
+    }
+}

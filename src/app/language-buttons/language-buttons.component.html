@@ -1,0 +1,16 @@
+<div class="dropdown">
+    
+    <div class="dropdown-toggle" data-toggle="dropdown">
+        <a>
+            <img [src]="this.api.getimageUrl('languageImage/',languageService.languageImage)" class="img_flag"/>
+            <p>{{languageService.languagePreference | uppercase }}</p>
+        </a>
+    </div>
+    <div class="dropdown-menu languageDrop">
+        <a class="dropdown-item" *ngFor="let language of languages"
+            (click)="languageService.changeLanguage(language.abbreviation,language.image,language.id,language.name)">
+            <img [src]="this.api.getimageUrl('languageImage/',language.image)" class="img_flag"/>
+            <p>{{ language.abbreviation | uppercase }}</p>
+        </a>
+    </div>
+</div>

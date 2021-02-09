@@ -1,0 +1,221 @@
+{
+    "main": {
+       
+        "login": {
+            "title": "Logg inn",
+            "sign_in_account": "LOGG INN",
+            "sign_up_account": "Har du ikke en konto? MELDE DEG PÅ",
+            "forgot_password": "Glemt passord ?",
+            "err_email": "Glemt passord ?",
+            "err_password": "Skriv inn passord!",
+            "email": "e-post",
+            "password": "Passord"
+        },
+        "registration": {
+            "title": "Melde deg på",
+            "first_name": "Fornavn",
+            "err_first_name": "Vennligst tast inn fornavn!",
+            "last_name": "Etternavn",
+            "err_last_name": "Vennligst tast inn etternavn!",
+            "email": "e-post",
+            "err_email": "Vennligst tast inn e-post!",
+            "err_phone_number": "Vennligst tast inn kontaktnummer!",
+            "password": "Passord",
+            "err_password": "Skriv inn passord!",
+            "c_password": "Bekreft passord",
+            "err_c_password": "Skriv inn passord!",
+            "err_not_match_pass": "Bekreft at passord ikke stemmer overens med passord.",  
+            "role": "rolle",
+            "err_role": "Velg rulletype!",
+            "GEMH": "GEMH-nummer",
+            "err_GEMH": "Vennligst tast inn GEMH-nummer.",
+
+            "reason": "Grunnen til",
+            "err_reason": "Vennligst skriv inn grunn.",
+
+            "signup": "MELDE DEG PÅ",
+            "allready_account": "Har du allerede en konto ? LOGG INN"    
+        },
+        "forgot": {
+            "title": "Glemt passord ?",
+            "email": "e-post",
+            "err_email": "Vennligst tast inn e-post!",
+            "send_mail": "SEND E-POST",
+            "back": "Tilbake"
+        },
+        "home": {
+            "title": "Hjem",
+            "search_title": "LetsMove for your happy",
+            "search_placeholder": "Søk etter ditt lykkelige trekk ...",
+            "for_sale" : "SELGE",
+            "for_rent" : "Leie",
+            "buy" : "kjøpe",
+            "technology_advantage" : "KUNDEN FOKUSERT",
+            "technology_advantage_text" : "Med avanserte nettstedfunksjoner, inkludert et flerspråklig tilpasset system som gir en trygg og pålitelig plattform for kjøpere, selgere og de som ønsker å leie.",
+            "letsmove_guarantee" : "BRUKERVENNLIG",
+            "letsmove_guarantee_text" : "Ønsker du å kjøpe, leie eller selge en eiendom i Hellas? Vår brukervennlige webside vil guide deg gjennom en sømløs tilgang. Lett opp huset ditt for å leie eller selge eller se etter noe du kan kjøpe på vår helt gjennomsiktige webside .",
+            "completed_transactions" : "INNOVATIVE",
+            "completed_transactions_text" : "Bla gjennom vår enorme database med eiendommer og finn ditt drømmehus! Vår hjemmeside inneholder tusenvis av nye eiendommer hver måned!",
+            
+            "where_can_i_live" : "Hvor kan jeg bo?",
+            "where_can_i_live_title" : "Søk og lagre eiendommer for salg og utleie i Hellas. Angi dine personlige preferanser i henhold til budsjettet ditt, så finner vi din perfekte match.",
+            "where_can_i_live_text" : "La oss gjøre nettverksadministrasjon, forbedre det økologiske miljøet. Jasmin bekvemmelighet Reservert behov. Jasminmasse. Med partnertema Penatibus Super Bowl-fjell ble født. Lorem gjør nettverksstyring, forbedrer det økologiske miljøet. Jasmin bekvemmelighet Reservert behov. Jasmin masse. ",
+            "where_can_i_live_link_title" : "Oppdag din perfekte beliggenhet",
+            "featured_properties" : "Egenskaper vi tror du kan like",
+
+            "meet_our_investors" : "Tilbakemelding fra klienter",
+
+            "in_the_news" : "container-fluid",
+            "in_the_news_text" : "Se gjennom de detaljerte artiklene våre som gir deg en unik innsikt i den greske livsstilen! Finn informasjon om populære områder, kulturminner, skoler og helsetjenester.",
+            "read_news" : "MER ARTIKLER",
+
+            "how_to_get_started" : "Hvordan komme i gang?",
+            "q1" : "1. Lag din investorprofil",
+            "text1" : "Registrer deg nå for å være den første som mottar varsel om nye egenskaper vi tror du kan like.",
+            "create_your_profile": "Kom i gang"
+        },
+        "property_list": {
+            "title": "Oppføring",
+            "sub_title": "Eiendom salg for London",
+            "search_radius" : "Søkeradius",
+            "err_select":"Vennligst velg!",
+            "this_area_only" : "Dette området bare",
+             "category" : "Kategori",
+             "select_property_category" : "Velg eiendomskategori",
+             "property_type" : "Eiendomstype",
+             "select_property_type" : "Velg eiendomstype",
+             "price_range" : "Prisklasse (€)",
+             "min" : "Min",
+             "max" : "Max",
+             "anytime" : "Når som helst",
+             "added_to_site" : "Lagt til nettstedet",
+             "find_properties" : "Finn egenskaper",
+             "properties" : "Eiendommer",
+             "sort_by" : "Sorter etter",
+             "recommended" : "Anbefalt",
+             "price_low_to_high" : "Pris (lav til høy)",
+             "price_high_to_low" : "Pris (høy til lav)",
+             "still_available" : "Fortsatt tilgjengelig",
+             "no_more_available" : "Ikke mer tilgjengelig",
+             "recently_property" : "Nylig eiendom",
+             "local_call_rate" : "Lokal samtalehastighet",
+             "avaliable_for" : "Tilgjengelig for:",
+            "type": "Type :",
+            "rooms": "Rom :",
+            "more_details": "Mer informasjon"
+        },
+        "contactus": {
+            "title": "Kontakt oss",
+            "get_in_touch_with_us" : "Ta kontakt med oss",
+            "description" : "Ridiculus Bibendum ingen ikke-forfatter ankler lla. Porttitor.Sed ellers trenger chatten din uteksaminert pottrøytringer mye latter.",
+            "address" : "Adresse:",
+            "address_text": "1481 Creekside Lane Avila Beach, CA 93424",
+            "phone_txt":"Telefon:",
+            "phone": "+53 345 7953 32453",
+            "email_txt" : "E-post:",
+            "email": "yourmail@gmail.com",
+            "name": "Navn",
+            "err_name":"Vennligst tast inn navn!",
+            "Email": "e-post",
+            "err_email":"Vennligst tast inn e-post!",
+            "subject": "Emne",
+            "err_subject": "Skriv inn emne!",
+            "message": "Beskjed",
+            "err_msg": "Vennligst skriv inn melding!",
+            "send": "SENDE",
+
+            "say_hello" : "Si hei"
+        },
+        "aboutus": {
+            "title" : "Om oss",
+            "why_chose_us" : "Hvorfor velge oss",
+            "q1" : "Lorem ipsum smart",
+            "txt1": "Lorem ipsum gulrøtter, forbedret konkurranse under studenter, men ved occaecat gir vitalitet til innsatsen.",
+            "our_team" : "Vårt team",
+            "name" : "Tillie Burns",
+            "designation" : "Markedssjef"
+        },
+        "property_detail": {
+            "title": "detaljer",
+            "description" : "Beskrivelse",
+             "map_street_view" : "Kart og gatevisning",
+             "reference_number" : "Referanse nummer:",
+             "price" : "Pris",
+             "avaliable_for" : "Tilgjengelig for:", 
+             "type" : "Type:",
+             "area_size" : "Arealstørrelse:",
+             "floor" : "Gulv:",
+            "room": "Rom:",
+            "full_description" : "Full beskrivelse",
+            "i_m_interested" : "Jeg er interessert",
+             "in_this_property" : "i denne eiendommen",
+            "first_name": "Fornavn",
+            "err_first_name": "Vennligst tast inn fornavn!",
+            "last_name": "Etternavn",
+            "err_last_name": "Vennligst tast inn etternavn!",
+            "phone": "Telefonnummer",
+            "err_phone": "Vennligst tast inn telefonnummer!",
+            "email": "e-post",
+            "err_email": "Vennligst tast inn e-post!", 
+            "nagotiation_price": "Forhandlingspris",
+            "err_price": "Vennligst tast inn pris for nagotiation!",
+            "enter_text_here": "Skriv inn tekst her.",
+            "err_text": "Vennligst skriv inn melding!",
+            "message" : "Melding (opptil 60 tegn)",
+             "send_message" : "Sende melding",
+             "policy" : "Ved å sende inn dette skjemaet bekrefter du at du godtar bruksvilkårene og personvernreglene og HomeGreekHome.com", 
+             "this_property_is_marketed_by" : "Denne eiendommen markedsføres av:",
+             "save_property" : "Lagre eiendom",
+             "recommendation_properties" : "Anbefalingseiendommer",
+
+
+             "request_details" : "Be om detaljer",
+            "avaliable_date": "Tilgjengelig dato:",
+            "construction_year:": "Byggeår:",
+            "orientation": "orientering",
+            "zone": "sone",
+            "heating": "Oppvarming:",
+            "heating_medium": "Varmemedium:",
+            "energy_class": "Energiklasse:",
+            "property_features": "Egenskaper",
+            "rooms": "Rom",
+            "bathroom": "Baderom",
+            "other_features": "Andre funksjoner",   
+            "i_want_to_talk_with": "Jeg vil snakke med ",
+            "administrator": "Administrator",
+            "agent": "Middel",
+            "admin": "admin",      
+            "best_home": "BESTE HJEM ",
+            "real_estate": "EIENDOM",
+            "listing_from_real_estate_agency": "Oppføring fra eiendomsmegling",
+            "website_phone_number": "nettsted telefonnummer"
+        },
+        "reset": {
+            "title": "Tilbakestille passord",
+            "password": "Nytt passord",
+            "err_pass": "Vennligst tast inn nytt passord!",
+            "c_pass": "bekreft passord",
+            "err_c_pass": "Vennligst tast inn Bekreft passord!",
+            "not_match": "Bekreft at passord ikke stemmer overens med passord.",
+            "submit": "SENDE INN",
+            "signin": "Logg inn"
+        },
+        "agent": {
+            "title": "Middel"
+        },
+        "developers": {
+            "title": "Utviklere"
+        },
+        "directory": {
+            "title": "Directory"
+        },
+        "individuals": {
+            "title": "personer"
+        },
+        "reusable": {
+            "empty": "No Recods Found"
+        }
+        
+        
+    }
+}

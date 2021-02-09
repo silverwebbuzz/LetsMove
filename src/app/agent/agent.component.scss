@@ -1,0 +1,63 @@
+
+  .img_main{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  }
+  .div_img{
+    text-align: center;
+    padding: 16px 0px 8px 0px;
+    .img_logo{
+      width: 60%;
+    }
+  }
+  .card_search{
+    position: absolute;
+    top: 14px;
+    right: 0;
+    left: 0;
+    margin: 32px;
+    border-radius: 0px;
+    box-shadow: 0px 0px;
+    background: transparent;
+    // padding: 16px;
+    // height: 175px;
+  
+      .lbl_line{
+        color: var(--ion-color-primary-contrast);
+        font-size: 22px;
+        display: block;
+        text-align: center;
+      }
+      .imp{
+        --padding-start: 0px !important;
+        padding: 0px !important;
+      }
+      .search{
+        padding: 0px 0px;
+        width: 100%;
+      }
+      .row_search{
+        // float: right;
+        width: 100%;
+  
+        .btn_buy{
+          width: 100% !important;
+          text-transform: uppercase;
+        }
+      }
+  }
+  .card_search.ios.hydrated{
+    visibility: visible;
+    overflow: visible;
+    z-index: 999;
+  }
+
+  .search_error{
+    color:#fff;
+  }
+
+  .div_divider{
+    border: 5px solid #eee;
+  }

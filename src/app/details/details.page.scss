@@ -1,0 +1,267 @@
+ion-content {
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+
+  .lbl_price_add {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0px;
+    display: block;
+  }
+  .lbl_add {
+    padding: 8px 0px;
+    font-size: 14px;
+    display: block;
+  }
+  .lbl_price_list {
+    padding: 0px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  // .btn_seg{
+  //     --background-checked: var(--ion-color-primary);
+  //     color: white;
+  // }
+  .slides_details {
+    margin-top: 16px;
+    padding-bottom: 28px;
+  }
+  .div_box {
+    padding: 8px;
+    border: 1px solid #ccc;
+    height: auto;
+
+    .row_seg {
+      padding: 5px 0px;
+      border-bottom: 0.5px dotted #ccc;
+      .col_seg {
+        padding: 0px;
+        .lbl_seg {
+          font-size: 14px;
+
+          .lbl_head {
+            font-weight: bold;
+          }
+          .lbl_desc {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .lbl_desc_f {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 8px 0px;
+  }
+  .lbl_desc_d {
+    display: block;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hr_line {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .slides_property {
+    margin: 16px 0px 0px 0px;
+    padding-bottom: 28px;
+
+    .slide_property {
+      // margin: 16px 0px 16px 0px;
+
+      .card_property {
+        margin: 0px;
+        border-radius: 0px;
+        box-shadow: 0 0 10px #ccc;
+        height: 330px;
+
+        .img_property {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+        }
+        .lbl_head_property {
+          display: block;
+          font-size: 20px;
+          text-align: left;
+          padding: 5px 16px;
+          text-transform: uppercase;
+        }
+        .lbl_add1_property {
+          display: block;
+          font-size: 18px;
+          text-align: left;
+          padding: 5px 16px;
+          text-transform: uppercase;
+        }
+        .lbl_add2_property {
+          display: block;
+          font-size: 16px;
+          text-align: left;
+          padding: 5px 16px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .lbl_rate {
+          display: block;
+          font-size: 14px;
+          text-align: left;
+          padding: 5px 16px;
+        }
+      }
+    }
+  }
+
+  .lbl_stick {
+    font-size: 20px;
+    display: block;
+    padding-top: 16px;
+    font-weight: 600;
+  }
+
+  .card_mark {
+    margin: 0px;
+    box-shadow: 0px 0px;
+    border-radius: 0px;
+    background: #eee;
+    padding: 16px;
+    margin-top: 16px;
+
+    .lbl_head {
+      font-weight: bold;
+      font-size: 16px;
+      display: block;
+    }
+    .lbl_add_full {
+      display: block;
+      font-size: 16px;
+      padding: 5px 0px;
+    }
+    .b._name {
+      display: block;
+      font-size: 16px;
+    }
+    .lbl_country {
+      display: block;
+      font-size: 16px;
+      padding: 5px 0px;
+    }
+    .item_property {
+      --padding-start: 0px;
+      --background: #eee;
+
+      ion-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .card_form {
+    margin: 0px;
+    box-shadow: 0px 0px;
+    border-radius: 0px;
+    background: #eee;
+    padding: 16px;
+    margin-top: 16px;
+    .lbl_prop {
+      font-size: 18px;
+      .spn_bold {
+        font-weight: bold;
+      }
+      .spn {
+        font-weight: normal;
+      }
+    }
+
+    .input-item {
+      //--background: transparent;
+      --inner-padding-end: 0px;
+      --padding-start: 10px;
+      padding: 0px 8px 0px 8px;
+      box-shadow: 0px 0px 0px #ccc;
+      margin: 16px 0px 0px 0px;
+      // border-bottom-left-radius: 0px;
+      // border-top-right-radius: 0px;
+      background: #fff;
+      --background: #fff;
+      border: 1px solid #ccc;
+
+      ion-icon {
+        color: var(--ion-color-medium);
+        font-size: 24px;
+      }
+
+      .input-box {
+        // border: 1px solid #ccc;
+        margin-left: 0px;
+        //--placeholder-color: #fff;
+        //--color: #fff;
+      }
+    }
+
+    .lbl_info {
+      margin-top: 8px;
+      font-size: 14px;
+      display: block;
+    }
+
+    .row_terms {
+      .col_terms {
+        padding: 0px;
+        .lbl_terms {
+          display: block;
+        }
+      }
+    }
+  }
+  .map_box {
+    height: 300px !important;
+  }
+  .btn_send {
+    text-transform: uppercase;
+    --border-radius: 8px;
+    margin: 16px 0px;
+  }
+}
+.map {
+  position: unset !important;
+}
+
+// #map {
+//   height: 100%;
+// }
+
+.hide {
+  display: none !important;
+}
+.div_banner {
+  margin: 16px 0px;
+  .img_banner {
+    height: auto;
+    width: auto;
+  }
+}
+.img_detail_slide {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.imgs_{
+  height: 75px;
+  width: 75px;
+}
+.p_{
+  margin-bottom: 4px;
+}

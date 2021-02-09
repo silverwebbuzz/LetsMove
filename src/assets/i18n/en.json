@@ -1,0 +1,217 @@
+{
+    "main": {
+        "login": {
+            "title": "SignIn",
+            "sign_in_account": "SIGN IN",
+            "sign_up_account": "Don't have an account ? SIGNUP",
+            "forgot_password": "Forgot Password ?",
+            "err_email": "Please Enter Email!",
+            "err_password": "Please Enter Password!",
+            "email": "Email",
+            "password": "Password"
+        },
+        "registration": {
+            "title": "SignUp",
+            "first_name": "First Name",
+            "err_first_name": "Please Enter First name!",
+            "last_name": "Last Name",
+            "err_last_name": "Please Enter Last name!",
+            "email": "Email",
+            "err_email": "Please Enter Email!",
+            "err_phone_number": "Please Enter Contact number!",
+            "password": "Password",
+            "err_password": "Please Enter Password!",
+            "c_password": "Confirm password",
+            "err_c_password": "Please Enter Password!",
+            "err_not_match_pass": "Confirm password does not match with password.",  
+            "role": "Role",
+            "err_role": "Please Select roll type!",
+            "GEMH": "GEMH Number",
+            "err_GEMH": "Please enter GEMH number.",
+
+            "reason": "Reason",
+            "err_reason": "Please enter Reason.",
+
+            "signup": "SIGN UP",
+            "allready_account": "Already have an account ? SIGNIN"
+            
+            
+        },
+        "forgot": {
+            "title": "Forgot Password ?",
+            "email": "Email",
+            "err_email": "Please Enter Email!",
+            "send_mail": "SEND EMAIL",
+            "back": "Back"
+        },
+        "home": {
+            "title": "Home",
+            "search_title" : "Let's get Moving",
+            "search_placeholder": "Search for your happy move...",
+            "for_sale" : "SELL",
+            "for_rent" : "Rent",
+            "buy" : "BUY",
+            "technology_advantage": "CUSTOMER FOCUSED",
+            "technology_advantage_text": "With state-of-the-art website features including a multi-language personalised system which provides a safe and reliable platform for buyers, sellers and those looking to rent.",
+            "letsmove_guarantee": "USER FRIENDLY",
+            "letsmove_guarantee_text": "Looking to buy, rent, or sell a property in Greece? Our user-friendly website will guide you through a seamless proccess. Easily list your house to rent or sell or look for something to buy on our fully transparent website.",
+            "completed_transactions": "INNOVATIVE",
+            "completed_transactions_text": "Browse through our vast database of properties and find your dream house! Our website features thousands of new properties every month!",     
+            "where_can_i_live" : "Where can i live?",
+            "where_can_i_live_title" : "Search and save properties for sale and rent in Greece. Enter your personal preferences according to your budget and we will find your perfect match.",
+            "where_can_i_live_text" : "",
+            "where_can_i_live_link_title" : "Discover your perfect location",
+            
+            "featured_properties": "Properties we think you may like",
+            "meet_our_investors": "Client Feedback",
+            "in_the_news" : "Latest News",
+"in_the_news_text" : "Glance through our detailed articles giving you a unique insight into the Greek Lifestyle! Find information about popular areas, cultural heritage sites as well as schools and health facilities.",
+"read_news" : "MORE ARTICLES",
+            "how_to_get_started" : "How to get started?",
+            "q1" : "Create your profile",
+            "text1" : "Register now to be the first to receive notification of new properties we think you may like.",
+            "create_your_profile": "GET STARTED"
+
+            
+        },
+        "property_list": {
+            "title": "Listing",
+            "sub_title": "Property sale for London",
+            "search_radius": "Search radius",
+            "err_select":"Please Select!",
+            "this_area_only": "This area only",
+            "category": "Category",
+            "select_property_category": "Select Property Category",
+            "property_type": "Property Type",
+            "select_property_type": "Select Property Type",
+            "price_range": "Price range (€)",
+            "min": "Min",
+            "max": "Max",
+            "anytime": "Anytime",
+            "added_to_site": "Added to site",
+            "find_properties": "Find properties",
+            "properties": "Properties",
+            "price_low_to_high": "Price (Low to High)",
+            "price_high_to_low": "Price (High to Low)",
+            "no_more_available": "No More Available",
+            "local_call_rate": "Local call rate",
+            "avaliable_for": "Avaliable for :",
+            "type": "Type :",
+            "rooms": "Rooms :",
+            "more_details": "More Details"
+        },
+        "contactus": {
+            "title": "Contact Us",
+            "get_in_touch_with_us": "Get in touch with us",
+            "description": "Donec ullamcorper nulla non metus auctor fringi lla. Curabitur blandit tempus porttitor.Sed lectus urna, ultricies sit amet risus eget.",
+            "address": "Address:",
+            "address_text": "1481 Creekside Lane Avila Beach, CA 93424",
+            "phone_txt": "Phone:",
+            "phone": "+53 345 7953 32453",
+            "email_txt": "Email:",
+            "email": "yourmail@gmail.com",
+            "name": "Name",
+            "err_name":"Please Enter Name!",
+            "Email": "Email",
+            "err_email":"Please Enter Email!",
+            "subject": "Subject",
+            "err_subject": "Please Enter Subject!",
+            "message": "Message",
+            "err_msg": "Please Enter Message!",
+            "send": "SEND",
+
+            "say_hello": "Say hello"
+        },
+        "aboutus": {
+            "title": "About Us",
+            "why_chose_us": "Why Choose Us",
+            "q1": "Lorem ipsum dolor",
+            "txt1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+            "our_team": "Our Team",
+            "name": "Tillie Burns",
+            "designation": "Marketing Manager"
+        },
+        "property_detail": {
+            "title": "Details",
+            "description": "Description",
+            "map_street_view": "Map & Street View",
+            "reference_number": "Reference number:",
+            "price": "Price",
+            "avaliable_for": "Avaliable for:",
+            "type": "Type:",
+            "area_size": "Area Size:",
+            "floor": "Floor:",
+            "room": "Rooms:",
+            "full_description": "Full description",
+            "i_m_interested": "I m interested",
+            "in_this_property": "in this property",
+            "first_name": "First Name",
+            "err_first_name": "Please Enter First name!",
+            "last_name": "Last Name",
+            "err_last_name": "Please Enter Last name!",
+            "phone": "Telephone Number",
+            "err_phone": "Please Enter Telephone Number!",
+            "email": "Email",
+            "err_email": "Please Enter Email!", 
+            "nagotiation_price": "Nagotiation Price",
+            "err_price": "Please enter nagotiation price!",
+            "enter_text_here": "Enter text here.",
+            "err_text": "Please enter Message!",
+            "message": "Message (Up to 60 character)",
+            "send_message": "Send Message",
+            "policy": "By submiting this form, you confirm  that you agree to our terms of use and privacy policy og HomeGreekHome.com",
+            "this_property_is_marketed_by": "This property is marketed by:",
+            "save_property": "Save property",
+            "recommendation_properties": "Recommendation Properties",
+            "contact_information": "Contact Information",
+
+            "request_details": "Request Details",
+            "avaliable_date": "Avaliable Date:",
+            "construction_year:": "Construction year:",
+            "orientation": "Orientation",
+            "zone": "Zone",
+            "heating": "Heating:",
+            "heating_medium": "Heating medium:",
+            "energy_class": "Energy class:",
+            "property_features": "Property Features",
+            "rooms": "Rooms",
+            "bathroom": "Bathroom",
+            "other_features": "Other Features",  
+
+            "i_want_to_talk_with": "I want to talk with ",
+            "administrator": "Administrator",
+            "agent": "Agent",
+            "admin": "Admin",      
+            "best_home": "BEST HOME ",
+            "real_estate": "REAL ESTATE",
+            "listing_from_real_estate_agency": "Listing from real estate agency",
+            "website_phone_number": "website Phone Number"
+        },
+        "reset": {
+            "title": "Reset Password",
+            "password": "New Password",
+            "err_pass": "Please Enter New password!",
+            "c_pass": "Confirm Password",
+            "err_c_pass": "Please Enter Confirm password!",
+            "not_match": "Confirm password does not match with password.",
+            "submit": "SUBMIT",
+            "signin": "Sign In"
+        },
+        "agent": {
+            "title": "Agent"
+        },
+        "developers": {
+            "title": "Developers"
+        },
+        "directory": {
+            "title": "Directory"
+        },
+        "individuals": {
+            "title": "Individuals"
+        },
+        "reusable": {
+            "empty": "No Recods Found"
+        }
+        
+    }
+}

@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.aboutus.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="../../assets/images/mainAboutUs.jpg" class="img_main" />
+
+  <ion-label class="lbl_main spc_all">{{ 'main.aboutus.why_chose_us' | translate }}</ion-label>
+
+  <ion-label class="lbl_para1">
+    We are Letsmove, an International Real Estate Property Platform in Greece. The foundations of our company lie on
+    providing simple access to our platform. Users including agents, developers and individuals, can connect with a
+    direct audience in a safe and user friendly environment. Letsmove started in Greece in 2019, and international
+    market expansion is planned in the near future. The aim is to build a brand on reputation of professionalism and
+    quality customer service as a priority. We will fully support you throughout the process and we are available 24/7
+    with online help and a call centre operating in the centre of Athens.
+  </ion-label>
+
+  <ion-label class="lbl_para1">
+    Letsmove features an innovative system allowing equal access to agents, developers and individuals in order for them
+    to showcase their property to buy, rent or sell.
+  </ion-label>
+
+  <div class="div_founder">
+    <img src="../../assets/images/isma.png" class="img_founder"/>
+    <ion-label class="lbl_founder">Isma Javid</ion-label>
+    <ion-label class="lbl_paras">
+      Isma Javid is the founder of Letsmove.gr. Isma set up Letsmove in 2019 after recognising a gap in the Greek property
+      market for a International Real Estate Platform. Isma has a great wealth of international experience and
+      understanding of the property market and investments in previous roles. Isma is also the founder of the innovative
+      company Lice Clinics of Greece.
+    </ion-label>
+  </div>
+
+  <ion-label class="lbl_stick">{{ 'main.aboutus.our_team' | translate }}</ion-label>
+
+  <ion-slides pager="true" [options]="slideOptsTeam" class="slides2">
+    <ion-slide class="slide2" *ngFor="let team of ourTeam;">
+      <ion-card class="card_slide2">
+        <img [src]="this.api.getimageUrl('teams/',team.image)" class="img_slide2" />
+        <ion-label color="dark" class="lbl_tech2">{{team.name}} </ion-label>
+        <ion-label color="medium" class="lbl_desc2">{{team.designation}}</ion-label>
+      </ion-card>
+    </ion-slide>
+
+  </ion-slides>
+
+
+</ion-content>

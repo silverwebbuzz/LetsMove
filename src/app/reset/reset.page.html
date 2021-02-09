@@ -1,0 +1,54 @@
+<ion-content class="page_signin">
+
+  <div class="blue-background">
+
+    <ion-label class="lbl_header">{{ 'main.reset.title' | translate }}</ion-label>
+
+    <div class="div-logo">
+      <img src="../../assets/images/logo.png" class="img_logo"/>
+    </div>
+
+  </div>
+
+  <div class="div-card">
+
+    <ion-card>
+
+      <form [formGroup]="reset_form" autocomplete="off">
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="lock-closed-outline" color="primary"></ion-icon>
+          <ion-input type="password" formControlName="new_password" placeholder="{{ 'main.reset.password' | translate }}" class="input-box">
+          </ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reset_form.controls.new_password.hasError('required') && reset_form.controls.new_password.touched">
+          <p class="content add-error">{{ 'main.reset.err_pass' | translate }}</p>
+        </ion-item>
+
+        <ion-item lines="none" class="input-item add space">
+          <ion-icon name="lock-closed" color="primary"></ion-icon>
+          <ion-input type="password" formControlName="confirm_password" placeholder="{{ 'main.reset.c_pass' | translate }}"
+            class="input-box"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reset_form.controls.confirm_password.hasError('required') && reset_form.controls.confirm_password.touched">
+          <p class="content add-error">{{ 'main.reset.err_c_pass' | translate }}</p>
+        </ion-item>
+        <ion-item no-padding lines="none" class="validator-error error-spc"
+          *ngIf="reset_form.controls.confirm_password.touched && reset_form.hasError('ResetPassword','confirm_password')">
+          <p class="content add-error"> {{ 'main.reset.not_match' | translate }}</p>
+        </ion-item>
+
+      </form>
+
+    </ion-card>
+    
+    <ion-button expand="full" size="large" shape="round" (click)="submit()">{{ 'main.reset.submit' | translate }}</ion-button>
+
+    <ion-label class="lbl-new" (click)="back()">{{ 'main.reset.signin' | translate }}</ion-label>
+  </div>
+
+</ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="isEmpty1" *ngIf="news?.length == 0 || news == null">
+    <ion-label class="lbl-empty">{{'main.reusable.empty' | translate}}</ion-label>
+  </div>
+
+  <div class="card_news" *ngFor="let n of news;let i = index;">
+    <a (click)="newsDetails(n.id)">
+    <img *ngIf="n.image" [src]="this.api.getimageUrl('newsimage/',n.image)" class="img_news" />
+    <ion-label color="dark" class="lbl_head_news">{{n.title}}</ion-label>
+    <ion-label color="medium" class="lbl_desc_news" [innerHtml]="n.description">
+    </ion-label>
+  </a>
+  </div>
+
+</ion-content>

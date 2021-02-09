@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="light" class="head">{{ 'main.contactus.title' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <img src="../../assets/images/contactus.png" class="img_main"/>
+
+  <ion-label class="lbl_main spc_all">{{ 'main.contactus.get_in_touch_with_us' | translate }}</ion-label>
+
+  <ion-label color="medium" class="lbl_desc spc">{{ 'main.contactus.description' | translate }}</ion-label>
+
+  <ion-item lines="none" class="item_add">
+    <ion-icon name="location-outline" color="primary"></ion-icon>
+    <ion-label class="icon_spc lbl_add_head">{{ 'main.contactus.address' | translate }}</ion-label>
+  </ion-item>
+
+  <ion-label color="medium" class="lbl_desc lbl_add">{{ address }}</ion-label>
+
+  <ion-item lines="none" class="item_add">
+    <ion-icon name="phone-portrait-outline" color="primary"></ion-icon>
+    <ion-label class="icon_spc lbl_add_head">{{ 'main.contactus.phone_txt' | translate }}</ion-label>
+  </ion-item>
+
+  <ion-label color="medium" class="lbl_desc lbl_add">{{ phone_no }}</ion-label>
+  <ion-label color="medium" class="lbl_desc lbl_add">{{ telephone }}</ion-label>
+
+  <ion-item lines="none" class="item_add">
+    <ion-icon name="mail-outline" color="primary" class="icon_spc"></ion-icon>
+    <ion-label class="icon_spc lbl_add_head">{{ 'main.contactus.email_txt' | translate }}</ion-label>
+  </ion-item>
+
+  <ion-label color="medium" class="lbl_desc lbl_add">{{ email }}</ion-label>
+
+  <form [formGroup]="contact_form" autocomplete="off">
+
+  <ion-item lines="none" class="input-item top">
+    <ion-input type="text" formControlName="name" placeholder="{{ 'main.contactus.name' | translate }}" class="input-box">
+    </ion-input>
+  </ion-item>
+
+  <ion-item no-padding lines="none" class="validator-error error-spc"
+    *ngIf="contact_form.controls.name.hasError('required') && contact_form.controls.name.touched">
+    <p class="content add-error">{{ 'main.contactus.err_name' | translate }}</p>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item">
+    <ion-input type="email" formControlName="email" placeholder="{{ 'main.contactus.Email' | translate }}" class="input-box">
+    </ion-input>
+  </ion-item>
+
+  <ion-item no-padding lines="none" class="validator-error error-spc"
+    *ngIf="contact_form.controls.email.hasError('required') && contact_form.controls.email.touched">
+    <p class="content add-error">{{ 'main.contactus.err_email' | translate }}</p>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-input type="text" formControlName="subject" placeholder="{{ 'main.contactus.subject' | translate }}" class="input-box">
+    </ion-input>
+  </ion-item>
+
+  <ion-item no-padding lines="none" class="validator-error error-spc"
+    *ngIf="contact_form.controls.subject.hasError('required') && contact_form.controls.subject.touched">
+    <p class="content add-error">{{ 'main.contactus.err_subject' | translate }}</p>
+  </ion-item>
+
+  <ion-item lines="none" class="input-item add space">
+    <ion-textarea row="3" type="text" formControlName="message" placeholder="{{ 'main.contactus.message' | translate }}" class="input-box"></ion-textarea>
+  </ion-item>
+
+  <ion-item no-padding lines="none" class="validator-error error-spc"
+    *ngIf="contact_form.controls.message.hasError('required') && contact_form.controls.message.touched">
+    <p class="content add-error">{{ 'main.contactus.err_msg' | translate }}</p>
+  </ion-item>
+
+  </form>
+
+  <ion-button expand="full" class="btn_snd" (click)="send()">{{ 'main.contactus.send' | translate }}</ion-button>
+
+</ion-content>
